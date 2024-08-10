@@ -1,9 +1,9 @@
 <template>
     <v-navigation-drawer v-model="isDrawerOpen" temporary >
       <v-list color="transparent">
-        <v-list-item prepend-icon="mdi-home" title="Home"></v-list-item>
-        <v-list-item prepend-icon="mdi-view-dashboard" title="Page 1"></v-list-item>
-        <v-list-item prepend-icon="mdi-view-dashboard" title="Page 2"></v-list-item>
+        <v-list-item prepend-icon="mdi-home" title="Início"></v-list-item>
+        <v-list-item prepend-icon="mdi-view-dashboard" title="Dados Visuais"></v-list-item>
+        <v-list-item prepend-icon="mdi-view-dashboard" title="Análise de Impacto"></v-list-item>
       </v-list>
     </v-navigation-drawer>
 
@@ -12,9 +12,9 @@
         <v-app-bar-title>Portal MAAT MG</v-app-bar-title>
 
         <template #append>
-            <v-btn><router-link to="/" class="no-link-style">Home</router-link></v-btn>
-            <v-btn><router-link to="/dashboard" class="no-link-style">Page 1</router-link></v-btn>
-            <v-btn><router-link to="/" class="no-link-style">Page 2</router-link></v-btn>
+            <v-btn><router-link to="/" class="no-link-style">Início</router-link></v-btn>
+            <v-btn><router-link to="/dashboard" class="no-link-style">Dados Visuais</router-link></v-btn>
+            <v-btn><router-link to="/" class="no-link-style">Análise de Impacto</router-link></v-btn>
         </template>
     </v-app-bar>
 </template>
