@@ -13,7 +13,7 @@
 
         <template #append>
             <v-btn><router-link to="/" class="no-link-style">Home</router-link></v-btn>
-            <v-btn><router-link to="/" class="no-link-style">Page 1</router-link></v-btn>
+            <v-btn><router-link to="/dashboard" class="no-link-style">Page 1</router-link></v-btn>
             <v-btn><router-link to="/" class="no-link-style">Page 2</router-link></v-btn>
         </template>
     </v-app-bar>
