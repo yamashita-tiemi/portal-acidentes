@@ -14,7 +14,7 @@
         <template #append>
             <v-btn><router-link to="/" class="no-link-style">Início</router-link></v-btn>
             <v-btn><router-link to="/dashboard" class="no-link-style">Dados Visuais</router-link></v-btn>
-            <v-btn><router-link to="/" class="no-link-style">Análise de Impacto</router-link></v-btn>
+            <v-btn><router-link to="/analise" class="no-link-style">Análise de Impacto</router-link></v-btn>
         </template>
     </v-app-bar>
 </template>

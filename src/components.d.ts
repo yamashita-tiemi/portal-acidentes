@@ -20,5 +20,7 @@ declare module 'vue' {
     SectionFilter: typeof import('./components/Section/SectionFilter.vue')['default']
     SectionPrimary: typeof import('./components/Section/SectionPrimary.vue')['default']
     SectionSecundary: typeof import('./components/Section/SectionSecundary.vue')['default']
+    Table: typeof import('./components/Table.vue')['default']
+    TableApi: typeof import('./components/TableApi.vue')['default']
   }
 }
