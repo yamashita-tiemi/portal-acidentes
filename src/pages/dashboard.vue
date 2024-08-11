@@ -5,33 +5,8 @@
         </v-container>
 
         <section-filter/>
+        <graph-bar/>
     </section>
     
 </template>
 
-<script lang="ts">
-import { defineComponent, ref, computed } from 'vue';
-
-export default defineComponent({
-  name: 'DateTimeSelector',
-  setup() {
-    const dateMenu = ref(false);
-    const timeMenu = ref(false);
-
-    const selectedDate = ref(new Date().toISOString().substr(0, 10));
-    const selectedTime = ref(new Date().toISOString().substr(11, 5));
-
-    const formattedDate = computed(() => selectedDate.value);
-    const formattedTime = computed(() => selectedTime.value);
-
-    return {
-      dateMenu,
-      timeMenu,
-      selectedDate,
-      selectedTime,
-      formattedDate,
-      formattedTime
-    };
-  }
-});
-</script>
