@@ -7,8 +7,8 @@
 </template>
 
 <script setup>
-    import { Line } from '/Users/victoriayamashita/Documents/Projetins/vue/portal-acidentes/node_modules/vue-chartjs/dist/index.js'
-    // import { Line } from 'vue-chartjs'
+    // import { Line } from '/Users/victoriayamashita/Documents/Projetins/vue/portal-acidentes/node_modules/vue-chartjs/dist/index.js'
+    import { Line } from 'vue-chartjs'
     import {
         Chart as ChartJS,
         CategoryScale,
