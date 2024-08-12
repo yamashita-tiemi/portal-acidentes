@@ -13,7 +13,7 @@ import { fileURLToPath, URL } from 'node:url'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/portal-acidentes',
+  base: 'https://yamashita-tiemi.github.io/portal-acidentes',
   plugins: [
     VueRouter({
       dts: 'src/typed-router.d.ts',

@@ -1,6 +1,7 @@
 {
   "name": "portal-acidentes",
   "version": "0.0.0",
+  "homepage": "https://yamashita-tiemi.github.io/portal-acidentes",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
