@@ -7,20 +7,15 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
-    Appbar: typeof import('./components/Appbar.vue')['default']
     AppBar: typeof import('./components/AppBar.vue')['default']
     AppFooter: typeof import('./components/AppFooter.vue')['default']
     Card: typeof import('./components/Card.vue')['default']
     Footer: typeof import('./components/Footer.vue')['default']
     GraphBar: typeof import('./components/GraphBar.vue')['default']
-    HelloWorld: typeof import('./components/HelloWorld.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
-    Section: typeof import('./components/Section/Section.vue')['default']
-    SectionFilter: typeof import('./components/Section/SectionFilter.vue')['default']
     SectionPrimary: typeof import('./components/Section/SectionPrimary.vue')['default']
     SectionSecundary: typeof import('./components/Section/SectionSecundary.vue')['default']
-    Table: typeof import('./components/Table.vue')['default']
     TableApi: typeof import('./components/TableApi.vue')['default']
   }
 }
