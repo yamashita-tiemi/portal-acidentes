@@ -1,8 +1,9 @@
 <template>
-    <v-container>
+    <div class="mt-8 d-flex flex-column align-center">
+        <h2 class="mb-2">Gravidade dos acidentes</h2>
         <VueDatePicker v-model="date" @update:model-value="filter" :enable-time-picker="false"></VueDatePicker>
         <canvas id="canvas" class="mt-10"></canvas>
-    </v-container>
+    </div>
 </template>
 
 <script setup>
