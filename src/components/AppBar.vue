@@ -9,12 +9,16 @@
 
   <v-app-bar class="pr-5">
     <v-app-bar-nav-icon @click="isDrawerOpen = !isDrawerOpen"></v-app-bar-nav-icon>
-    <v-app-bar-title>Portal MAAT MG</v-app-bar-title>
+    <router-link to="/" class="no-link-style"><v-app-bar-title>Portal MAAT MG</v-app-bar-title></router-link>
+    
 
     <template #append>
-      <v-btn><router-link to="/" class="no-link-style">Início</router-link></v-btn>
-      <v-btn><router-link to="/dashboard" class="no-link-style">Dados Visuais</router-link></v-btn>
-      <v-btn><router-link to="/analise" class="no-link-style">Análise de Impacto</router-link></v-btn>
+      <div class="d-none d-md-block">
+        <router-link to="/" class="no-link-style"><v-btn>Início</v-btn></router-link>
+        <router-link to="/dashboard" class="no-link-style"><v-btn>Dados Visuais</v-btn></router-link>
+        <router-link to="/analise" class="no-link-style"><v-btn>Análise de Impacto</v-btn></router-link>
+      </div>
+      
       <v-menu bottom left>
         <template v-slot:activator="{ props }">
           <v-btn class="text-none" stacked v-bind="props">
