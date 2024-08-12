@@ -1,10 +1,10 @@
 <template>
     <v-container>
-      <VueDatePicker v-model="date" @update:model-value="filter" :enable-time-picker="false"></VueDatePicker>
+        <VueDatePicker v-model="date" @update:model-value="filter" :enable-time-picker="false"></VueDatePicker>
+        <canvas id="canvas"></canvas>
     </v-container>
-    <canvas id="canvas"></canvas>
 </template>
-  
+
 <script setup>
     import { Line } from '/Users/victoriayamashita/Documents/Projetins/vue/portal-acidentes/node_modules/vue-chartjs/dist/index.js'
     // import { Line } from 'vue-chartjs'
@@ -30,14 +30,10 @@
     )
 
     import { ref } from 'vue';
-//   import VueDatePicker from '@vuepic/vue-datepicker';
-//   import '@vuepic/vue-datepicker/dist/main.css'
 
-  var date = ref({
-    date: new Date().getDate()
-  });
-  var data;
-  var myChart;
+    var date = ref();
+    var dataJson;
+    var myChart;
 
     function updateChart() {
         async function fetchData() {
@@ -47,33 +43,40 @@
                 console.error("Erro ao carregar dados")
             }
             const datapoints = await response.json();
-                return datapoints;
+            return datapoints;
         };
         fetchData().then(datapoints => {
-            data = datapoints;
-            newCharts(data); 
+            dataJson = datapoints;
+            newCharts(dataJson);
         });
     }
     updateChart();
-    
+
 
     function filter(modelData) {
-        var months = data.filter(x => (
+        var days = dataJson.filter(x => (
             new Date(x.datetime).getDate() == modelData.getDate() &&
             new Date(x.datetime).getMonth() == modelData.getMonth() &&
             new Date(x.datetime).getFullYear() == modelData.getFullYear()
         ));
-        newCharts(months);
+        newCharts(days);
     }
-    
+
     function newCharts(l) {
-        if(myChart != null) { myChart.destroy(); }
+        var label = l.map(e => new Date(e.datetime).toLocaleDateString());
+
+        if (myChart != null) { myChart.destroy(); }
+
+        if(date.value != null) {
+            console.log("dd");
+            label = l.map(e => new Date(e.datetime).toLocaleString('pt-BR', { hour: 'numeric', minute: 'numeric' }))
+        }
         myChart = new ChartJS(
             document.getElementById('canvas'),
             {
                 type: 'line',
                 data: {
-                    labels: l.map(e => e.datetime),
+                    labels: label,
                     datasets: [{
                         label: 'Gráfico ao longo do mês',
                         data: l.map(e => e.value),
@@ -81,7 +84,8 @@
                         borderColor: 'rgb(75, 192, 192)',
                         tension: 0.1
                     }]
-            }}
+                }
+            }
         );
     }
 </script>
