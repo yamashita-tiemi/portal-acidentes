@@ -1,4 +1,8 @@
-# Guia de Execução da Aplicação
+# Portal de Monitoramento e Análise de Acidentes de Trânsito em Minas Gerais
+
+Este projeto é uma plataforma web criada para facilitar a visualização de dados relacionados a acidentes no estado de Minas Gerais. Desenvolvido como parte de um desafio em Vue.js, o projeto utiliza dados fictícios para demonstração.
+
+####  Guia de Execução da Aplicação
 
 Para executar a aplicação, siga os passos abaixo:
 
@@ -35,4 +39,15 @@ Para executar a aplicação, siga os passos abaixo:
     [http://localhost:3000/](http://localhost:3000/)
 
 Você deve ver a aplicação em execução.
+
+
+
+
+#### Saiba mais
+
+- [Vue.js Documentation](https://vuejs.org/guide/introduction.html)
+- [Vuetify](https://vuetifyjs.com/en/)
+- [Pinia](https://pinia.vuejs.org/)
+- [Chart.js](https://www.chartjs.org/)
+- [Axios](https://axios-http.com/ptbr/docs/intro)
 
