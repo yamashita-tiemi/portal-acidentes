@@ -1,7 +1,7 @@
 <template>
     <v-container>
         <VueDatePicker v-model="date" @update:model-value="filter" :enable-time-picker="false"></VueDatePicker>
-        <canvas id="canvas"></canvas>
+        <canvas id="canvas" class="mt-10"></canvas>
     </v-container>
 </template>
 
@@ -78,7 +78,7 @@
                 data: {
                     labels: label,
                     datasets: [{
-                        label: 'Gráfico ao longo do mês',
+                        label: 'Média de acidentes em Minas Gerais',
                         data: l.map(e => e.value),
                         backgroundColor: 'rgba(0, 119, 204, 0.3)',
                         borderColor: 'rgb(75, 192, 192)',

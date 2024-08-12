@@ -1,9 +1,14 @@
 <template>
-  <v-data-table 
-    :headers="headers" 
-    :items="items"
+  <v-card
+    title="Taxa de mortalidade por lesões de trânsito "
     class="bg-grey-lighten-5 mt-8"
-  ></v-data-table>
+    flat
+  >
+    <v-data-table 
+      :headers="headers" 
+      :items="items"
+    ></v-data-table>
+  </v-card>
 </template>
 
 <script setup>
