@@ -1,7 +1,9 @@
 <template>
-  <v-container>
-    <v-data-table :headers="headers" :items="items"></v-data-table>
-  </v-container>
+  <v-data-table 
+    :headers="headers" 
+    :items="items"
+    class="bg-grey-lighten-5 mt-8"
+  ></v-data-table>
 </template>
 
 <script setup>
@@ -19,7 +21,7 @@ axios.get(APIURL)
     headers.value = [
       { title: 'Id', key: 'id' },
       { title: 'Ano', key: 'ano' },
-      { title: 'Porcentagem', key: 'porcentagem' },
+      { title: 'Porcentagem (%)', key: 'porcentagem' },
     ];
 
     var qualquer = response.data.map(e => {
